@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donate | HopeRise</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Poppins, sans-serif;
+      background: linear-gradient(135deg, #00334d, #007ba7);
+      color: white;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    nav {
+      background: rgba(0, 34, 54, 0.95);
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(6px);
+      z-index: 999;
+      animation: slideDown 0.8s ease;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-60px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #00e0ff;
+    }
+
+    header {
+      padding: 45px 20px;
+      background: #005f86;
+      animation: slideUp 1s ease;
+    }
+
+    header h1 {
+      font-size: 34px;
+      font-weight: bold;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 17px;
+      opacity: 0.9;
+    }
+
+
+    .donate-box {
+      width: 90%;
+      max-width: 450px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.12);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.25);
+      animation: pop 0.9s ease;
+    }
+
+    input, select {
+      width: 90%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus, select:focus {
+      border: 2px solid #00e0ff;
+    }
+
+    button {
+      background: #00e0ff;
+      color: #003344;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #72faff;
+      transform: scale(1.05);
+    }
+
+
+    .bank-box {
+      width: 90%;
+      max-width: 500px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      animation: fadeIn 1.2s ease;
+      box-shadow: 0 0 20px rgba(0,0,0,0.22);
+    }
+
+
+    footer {
+      background: #002b40;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+
+
+    @media (max-width: 500px) {
+      header h1 { font-size: 26px; }
+      header p { font-size: 14px; }
+      button { width: 95%; }
+    }
+
+
+    @media (min-width: 501px) and (max-width: 900px) {
+      header h1 { font-size: 30px; }
+      .donate-box { padding: 30px; }
+    }
+
+ 
+    @media (min-width: 901px) {
+      header h1 { font-size: 36px; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="crowdfunding.html">Home</a>
+    <a href="#donate">Donate</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Support HopeRise Foundation</h1>
+    <p>Your donation helps provide education for children in need.</p>
+  </header>
+
+  <div class="donate-box" id="donate">
+    <h2>Make a Donation</h2>
+
+    <form id="donationForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="number" id="amount" placeholder="Amount (₹)" min="1" required>
+
+      <select id="paymentMethod" required>
+        <option value="">Select Payment Method</option>
+        <option>UPI</option>
+        <option>Credit / Debit Card</option>
+        <option>Bank Transfer</option>
+      </select>
+
+      <button type="submit">Donate Now</button>
+    </form>
+
+    <p style="margin-top: 10px; font-size: 13px; opacity: 0.8;">
+      Payments are secure and encrypted 🔒
+    </p>
+  </div>
+
+ 
+  <section class="bank-box">
+    <h2 style="text-align:center;">🏦 Bank Transfer Details</h2><br>
+
+    <p><strong>Bank Name:</strong> State Bank of India (SBI)</p>
+    <p><strong>Account Name:</strong> HopeRise Foundation</p>
+    <p><strong>Account Number:</strong> 123456789012</p>
+    <p><strong>IFSC Code:</strong> SBIN0000001</p>
+    <p><strong>Branch:</strong> Coimbatore Main Branch</p>
+
+    <hr style="border: 0.5px solid #99d8ff; margin: 15px 0;">
+
+    <p style="font-size:14px; opacity:0.9; text-align:center;">
+      💡 After donating through NEFT / IMPS / RTGS,<br>
+      please email your transaction screenshot to  
+      <b>support@hoperise.org</b>
+    </p>
+  </section>
+
+  <footer id="contact">
+    © 2025 HopeRise Foundation | Email: support@hoperise.org
+  </footer>
+
+
+
+<script>
+document.getElementById("donationForm").addEventListener("submit", function(e) {
+  e.preventDefault(); 
+
+  const name = document.getElementById("name").value.trim();
+  const amount = parseFloat(document.getElementById("amount").value);
+
+  if (!name || isNaN(amount) || amount <= 0) {
+    alert("⚠️ Please enter valid details.");
+    return;
+  }
+
+  let totalRaised = parseFloat(localStorage.getItem("totalRaised")) || 450000;
+
+  totalRaised += amount;
+  if (totalRaised > 1000000) totalRaised = 1000000;
+
+  localStorage.setItem("totalRaised", totalRaised);
+
+  alert(`🙏 Thank you, ${name}! Your donation of ₹${amount.toLocaleString("en-IN")} was successful.`);
+
+  window.location.href = "crowdfunding.html";
+});
+</script>
+
+</body>
+</html>
